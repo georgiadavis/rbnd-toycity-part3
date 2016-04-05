@@ -1,6 +1,6 @@
 class Customer
   @@customers = []
-    attr_reader :name
+    attr_reader :title, :price, :stock
 
   def initialize(options={})
     @@customers << self
@@ -16,7 +16,7 @@ class Customer
   end
 
   def find_by_name
-    # to help you quickly return a single customer
+    # to help you quickly return a single customer based on its title
   end
 
   private

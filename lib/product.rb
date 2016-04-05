@@ -1,11 +1,12 @@
 class Product
+  attr_reader :title, :price, :stock
   # When instantiating a new product it will add itself to a class variable @@products
   # which is an array @@products will always contain all existing products
   @@products = []
-    attr_reader :title, :price, :stock
 
   def initialize(options={})
-    @@products << self
+    @title = options[:title]
+    add_to_products
   end
   # The self.all method simply returns the @@products array
   def self.all
@@ -24,7 +25,11 @@ class Product
   private
 
   def add_to_products
-    # return error message "This toy already exists. (DuplicateProductError)"
+    if title == @title
+      raise DuplicateProductError, "'#{title}' toy already exists"
+    else
+      
+    end
     @@products << self
   end
 end
