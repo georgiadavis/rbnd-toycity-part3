@@ -25,11 +25,9 @@ class Product
   private
 
   def add_to_products
-    if title == @title
-      raise DuplicateProductError, "'#{title}' toy already exists"
-    else
-      
-    end
+    # if product already exists:
+    raise DuplicateProductError, "'#{title}' toy already exists"
+    # else add product to array
     @@products << self
   end
 end
