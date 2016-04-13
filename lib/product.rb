@@ -18,16 +18,17 @@ class Product
     # return an array of products with stock greater than zero.
   end
 
-  def find_by_title
-    # to help you quickly return a single product based on its title
+  def find_by_title(title)
+    return #single product based on its title
   end
 
   private
 
   def add_to_products
-    # if product already exists:
-    raise DuplicateProductError, "'#{title}' toy already exists"
-    # else add product to array
-    @@products << self
+    if @@products.map { |product| product.title }.include? @title
+      raise DuplicateProductError, "'#{title}' toy already exists"
+    else
+      @@products << self
+    end
   end
 end
