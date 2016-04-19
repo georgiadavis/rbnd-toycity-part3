@@ -1,11 +1,13 @@
 class Product
-  attr_reader :title, :price, :stock
+  attr_accessor :title, :price, :stock
   # When instantiating a new product it will add itself to a class variable @@products
   # which is an array @@products will always contain all existing products
   @@products = []
 
   def initialize(options={})
     @title = options[:title]
+    @price = options[:price]
+    @stock = options[:stock]
     add_to_products
   end
   # The self.all method simply returns the @@products array
@@ -19,7 +21,7 @@ class Product
   end
 
   def find_by_title(title)
-    return #single product based on its title
+  
   end
 
   private
