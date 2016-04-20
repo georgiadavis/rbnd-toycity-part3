@@ -23,14 +23,12 @@ class Product
 
   def in_stock?
     # return true or false if item is in stock or not
-
+    @stock > 0
   end
 
   def self.find_by_title(title)
     @@products.find { |product| product.title == title}
   end
-
-
 
   private
 
