@@ -1,17 +1,17 @@
 # class that joins customer and product, letting you know which customers have purchased which transactions.
-class Transaction(Customer, Product)
-    attr_reader :id , :customer, :product
+class Transaction
+    attr_reader :id
 
-    @@id = 1
-    @@transaction= []
+    @@id = 0
+    @@transactions= []
 
 # need to initialize with an id that increments with each transaction
-  def initialize(options={})
+  def initialize
     @id = @@id
     @@id += 1
-    @customer= options[:customer]
-    @product= options[:product]
-    add_to_transactions
+    # @customer= options[:customer]
+    # @product= options[:product]
+    @@transactions << self
   end
 
   def self.all
@@ -39,6 +39,5 @@ class Transaction(Customer, Product)
 
   def add_to_transactions
     # return error message "OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock."
-    @@transactions << self
   end
 end

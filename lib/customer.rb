@@ -11,11 +11,6 @@ class Customer
     @@customers
   end
 
-  def in_stock?
-    # return true or false if item is in stock or not
-    # return an array of customers with stock greater than zero.
-  end
-
   def self.find_by_name(name)
     # to help you quickly return a single customer based on its name
     @@customers.find { |customer| customer.name == name }
