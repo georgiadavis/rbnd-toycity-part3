@@ -1,5 +1,5 @@
 class Product
-  attr_accessor :title, :price, :stock
+  attr_reader :title, :price, :stock
   # When instantiating a new product it will add itself to a class variable @@products
   # which is an array @@products will always contain all existing products
   @@products = []
@@ -20,9 +20,14 @@ class Product
     # return an array of products with stock greater than zero.
   end
 
-  def find_by_title(title)
-  
+  def self.find_by_title(name)
+     @@products.each do |product|
+      if name == product.title
+        print product.title 
+      end
+    end
   end
+
 
   private
 
