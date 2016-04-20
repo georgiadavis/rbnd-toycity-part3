@@ -1,16 +1,16 @@
 # class that joins customer and product, letting you know which customers have purchased which transactions.
-class Transaction
+class Transaction < Customer
     attr_reader :id
 
-    @@id = 0
+    @@id = 1
     @@transactions= []
 
 # need to initialize with an id that increments with each transaction
-  def initialize
+  def initialize(customer, product)
     @id = @@id
     @@id += 1
-    # @customer= options[:customer]
-    # @product= options[:product]
+    @customer= customer
+    @product= product
     @@transactions << self
   end
 
