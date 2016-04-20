@@ -15,14 +15,21 @@ class Product
     @@products
   end
 
+
+  def self.in_stock
+    # return an array of products with stock greater than zero.
+    @@products.select {|product| product.stock > 0}
+  end
+
   def in_stock?
     # return true or false if item is in stock or not
-    # return an array of products with stock greater than zero.
+
   end
 
   def self.find_by_title(title)
-    @@products.find {|p| p.title == title}
+    @@products.find { |product| product.title == title}
   end
+
 
 
   private
