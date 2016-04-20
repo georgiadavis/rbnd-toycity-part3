@@ -15,7 +15,6 @@ class Product
     @@products
   end
 
-
   def self.in_stock
     # return an array of products with stock greater than zero.
     @@products.select {|product| product.stock > 0}

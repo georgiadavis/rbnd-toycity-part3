@@ -1,9 +1,10 @@
 class Customer
   @@customers = []
-    attr_reader :title, :price, :stock
+    attr_reader :name
 
   def initialize(options={})
-    @@customers << self
+    @name= options[:name]
+    add_to_customers
   end
 
   def self.all
@@ -15,14 +16,19 @@ class Customer
     # return an array of customers with stock greater than zero.
   end
 
-  def find_by_name
-    # to help you quickly return a single customer based on its title
+  def self.find_by_name(name)
+    # to help you quickly return a single customer based on its name
+    @@customers.find { |customer| customer.name == name }
   end
 
   private
 
   def add_to_customers
     # return error message "This customer already exists. (DuplicateCustomerError)"
-    @@customers << self
+    if @@customers.map { |customer| customer.name }.include? @name
+      raise DuplicateProductError, "'#{name}' customer already exists"
+    else
+      @@customers << self
+    end
   end
 end
