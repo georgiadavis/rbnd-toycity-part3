@@ -20,12 +20,8 @@ class Product
     # return an array of products with stock greater than zero.
   end
 
-  def self.find_by_title(name)
-     @@products.each do |product|
-      if name == product.title
-        print product.title 
-      end
-    end
+  def self.find_by_title(title)
+    @@products.find {|p| p.title == title}
   end
 
 
