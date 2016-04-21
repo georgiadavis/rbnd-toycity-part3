@@ -20,10 +20,12 @@ class Transaction < Customer
 
   def customer
     # instance method should return Customer object
+    @customer
   end
 
   def product
     # instance method should return Product object
+    @product
   end
 
   def purchase
