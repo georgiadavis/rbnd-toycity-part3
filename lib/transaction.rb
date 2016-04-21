@@ -1,5 +1,5 @@
 # class that joins customer and product, letting you know which customers have purchased which transactions.
-class Transaction < Customer
+class Transaction < Product
     attr_reader :id
 
     @@id = 1
@@ -28,18 +28,4 @@ class Transaction < Customer
     @product
   end
 
-  def purchase
-    # created a new Transaction object
-    # whenever there is a transaction the stock of product should automatically decrease by 1
-  end
-
-  def find_by_title
-    # to help you quickly return a single product based on its title
-  end
-
-  private
-
-  def add_to_transactions
-    # return error message "OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock."
-  end
 end
