@@ -11,6 +11,7 @@ class Transaction
     @@id += 1
     @customer= customer
     @product= product
+    Product.purchased
     @@transactions << self
   end
 

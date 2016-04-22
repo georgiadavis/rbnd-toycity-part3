@@ -29,10 +29,15 @@ class Product
     @@products.find { |product| product.title == title}
   end
 
-  def purchased
+  def purchased(title)
     # whenever there is a transaction the stock of product should automatically decrease by 1
-    # @@product.stock -= 1 
+    if @@products.find { |product| product.title == title}
+      @stock -= 1
+    end
   end
+
+
+
 
   private
 
