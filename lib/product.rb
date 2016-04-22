@@ -1,5 +1,6 @@
 class Product
-  attr_reader :title, :price, :stock
+  attr_reader :title, :price
+  attr_accessor :stock
   # When instantiating a new product it will add itself to a class variable @@products
   # which is an array @@products will always contain all existing products
   @@products = []
@@ -29,15 +30,10 @@ class Product
     @@products.find { |product| product.title == title}
   end
 
-  def purchased(title)
+  def purchased
     # whenever there is a transaction the stock of product should automatically decrease by 1
-    if @@products.find { |product| product.title == title}
-      @stock -= 1
-    end
+    self.stock -= 1
   end
-
-
-
 
   private
 

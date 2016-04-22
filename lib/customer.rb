@@ -11,9 +11,8 @@ class Customer
     @@customers
   end
 
-################ How is this Transaction.new working?!?! Reltionship between classes is confusing ###################
   def customer_purchase(product)
-    Transaction.new(self, product) 
+    Transaction.new(self, product)
   end
 
   def self.find_by_name(name)

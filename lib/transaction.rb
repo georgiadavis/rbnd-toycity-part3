@@ -11,7 +11,7 @@ class Transaction
     @@id += 1
     @customer= customer
     @product= product
-    Product.purchased
+    product.purchased
     @@transactions << self
   end
 
@@ -19,19 +19,12 @@ class Transaction
     @@transactions
   end
 
-  def customer
-    # instance method should return Customer object
+  def customer # instance method returns Customer object
     @customer
   end
 
-  def product
-    # instance method should return Product object
+  def product# instance method returns Product object
     @product
-  end
-
-  def customer_purchase(toy)
-    p "hi"
-    #  must have created a new Transaction object.
   end
 
 end

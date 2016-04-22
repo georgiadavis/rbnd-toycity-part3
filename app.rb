@@ -60,11 +60,9 @@ puts nanoblock.stock # Should return 11 (not sure how do this)
 walter.customer_purchase(nanoblock)
 
 puts Transaction.all.count # Should return 2
-p Customer.all
-p Product.all
-p Transaction.all
-# transaction2 = Transaction.find(2)
-# puts transaction2.product == nanoblock # Should return true
+
+transaction2 = Transaction.find(2)
+puts transaction2.product == nanoblock # Should return true
 
 # walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
