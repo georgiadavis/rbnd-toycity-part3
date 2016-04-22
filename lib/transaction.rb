@@ -27,4 +27,9 @@ class Transaction
     @product
   end
 
+  def self.find_by_transaction(transaction)
+    @@transaction.find { |transaction| transaction.id == transaction}
+  end
+
+
 end
