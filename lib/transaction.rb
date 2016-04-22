@@ -1,5 +1,5 @@
 # class that joins customer and product, letting you know which customers have purchased which transactions.
-class Transaction < Product
+class Transaction
     attr_reader :id
 
     @@id = 1
@@ -26,6 +26,11 @@ class Transaction < Product
   def product
     # instance method should return Product object
     @product
+  end
+
+  def customer_purchase(toy)
+    p "hi"
+    #  must have created a new Transaction object.
   end
 
 end

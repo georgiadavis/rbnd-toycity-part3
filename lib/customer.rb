@@ -11,15 +11,14 @@ class Customer
     @@customers
   end
 
+################ How is this Transaction.new working?!?! Reltionship between classes is confusing ###################
+  def customer_purchase(product)
+    Transaction.new(self, product) 
+  end
+
   def self.find_by_name(name)
     # to help you quickly return a single customer based on its name
     @@customers.find { |customer| customer.name == name }
-  end
-
-  def customer_purchase(toy)
-    # created a new Transaction object
-    p"hi!"
-    # whenever there is a transaction the stock of product should automatically decrease by 1
   end
 
   private
