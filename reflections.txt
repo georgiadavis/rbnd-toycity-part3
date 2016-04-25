@@ -1,5 +1,5 @@
-How long did you spend working on this project?
-What was the most rewarding challenge you conquered?
+How long did you spend working on this project? This project took a LONGGG TIME. I gave probably 5 hours a week for about 3 weeks.
+What was the most rewarding challenge you conquered? The most rewarding challenge I conquered was finally understanding the difference between class methods and instance methods
 What two additional features did you build? Why?
 Where do you still have room to grow?
 

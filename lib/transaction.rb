@@ -32,5 +32,4 @@ class Transaction
     @@transactions.find { |transaction| transaction.id == id }
   end
 
-
 end
