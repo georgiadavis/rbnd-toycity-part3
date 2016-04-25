@@ -27,8 +27,9 @@ class Transaction
     @product
   end
 
-  def self.find_by_transaction(transaction)
-    @@transaction.find { |transaction| transaction.id == transaction}
+  def self.find_by_transaction(id)
+    # to help you quickly return a single customer based on its name
+    @@transactions.find { |transaction| transaction.id == id }
   end
 
 
