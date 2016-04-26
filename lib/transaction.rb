@@ -1,6 +1,6 @@
 # class that joins customer and product, letting you know which customers have purchased which transactions.
 class Transaction
-    attr_reader :id
+    attr_reader :id, :customer, :product
 
     @@id = 1
     @@transactions= []
@@ -17,14 +17,6 @@ class Transaction
 
   def self.all
     @@transactions
-  end
-
-  def customer # instance method returns Customer object
-    @customer
-  end
-
-  def product# instance method returns Product object
-    @product
   end
 
   def self.find_by_transaction(id)

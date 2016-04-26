@@ -18,7 +18,6 @@ class Customer
 
   def customer_purchase(product)
     if product.in_stock? == false
-      # print "'#{product.title}' is out of stock"
       raise OutOfStockError "'#{product.title}' is out of stock"
     else
       Transaction.new(self, product)
@@ -30,7 +29,7 @@ class Customer
   def add_to_customers
     # return error message "This customer already exists. (DuplicateCustomerError)"
     if @@customers.map { |customer| customer.name }.include? @name
-      raise DuplicateProductError, "'#{name}' customer already exists"
+      raise DuplicateCustomerError, "'#{name}' customer already exists"
     else
       @@customers << self
     end

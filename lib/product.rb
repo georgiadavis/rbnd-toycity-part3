@@ -35,6 +35,9 @@ class Product
     self.stock -= 1
   end
 
+  def restock(amount)
+    @stock += amount
+
   private
 
   def add_to_products
