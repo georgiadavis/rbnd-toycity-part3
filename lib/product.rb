@@ -37,6 +37,7 @@ class Product
 
   def restock(amount)
     @stock += amount
+  end
 
   private
 

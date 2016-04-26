@@ -1,9 +1,11 @@
 class Customer
   @@customers = []
     attr_reader :name
-
+    attr_accessor :wishlist
+    
   def initialize(options={})
     @name= options[:name]
+    @wishlist= options[:wishlist]
     add_to_customers
   end
 

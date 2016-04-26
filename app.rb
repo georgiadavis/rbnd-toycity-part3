@@ -65,5 +65,14 @@ transaction2 = Transaction.find_by_transaction(2)
 puts transaction2.product
 puts transaction2.product == nanoblock # Should return true
 
-walter.customer_purchase(firehouse)
+# walter.customer_purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+# Add stock to toy
+firehouse.restock(5)
+puts firehouse.stock
+
+#Add a wishlist item
+julia = Customer.find_by_name("Julia Van Cleve")
+julia.wishlist = firehouse
+p julia.wishlist

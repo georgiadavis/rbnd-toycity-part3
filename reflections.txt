@@ -4,13 +4,9 @@ What was the most rewarding challenge you conquered?
 The most rewarding challenge I conquered was finally understanding the difference between class methods and instance methods
 What two additional features did you build? Why?
 Where do you still have room to grow?
-Understanding the relationship between classes and how to access methods that are in other classes.
+I still have difficulty figuring out the relationship between classes and how to access methods that exist in other classes.
 
 Get creative with your two new features. If you’re stuck in a creative rut, here are some ideas:
 
-A way for customers to return items
-What ever happened to those brands? Might be time to bring them back
-Better ways to find transactions
-More details about customers
-More details about products
-Better errors in other edge cases
+1) Restocking toys
+2) Created customer wishlist 
