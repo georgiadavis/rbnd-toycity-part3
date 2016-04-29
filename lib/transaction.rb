@@ -12,7 +12,6 @@ class Transaction
     @customer= customer
     @product= product
     product.purchased
-
     @@transactions << self
   end
 

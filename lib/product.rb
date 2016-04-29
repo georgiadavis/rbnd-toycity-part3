@@ -31,8 +31,11 @@ class Product
   end
 
   def purchased
-    # whenever there is a transaction the stock of product should automatically decrease by 1
-    self.stock -= 1
+    if in_stock? == false
+      raise OutOfStockError "'#{product.title}' is out of stock"
+    else
+      self.stock -= 1
+    end
   end
 
   def restock(amount)
