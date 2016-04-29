@@ -74,5 +74,6 @@ puts firehouse.stock
 
 #Add a wishlist item
 julia = Customer.find_by_name("Julia Van Cleve")
-julia.wishlist = firehouse
-p julia.wishlist
+julia.wishlist(firehouse)
+
+p julia

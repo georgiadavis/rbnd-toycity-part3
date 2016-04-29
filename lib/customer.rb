@@ -1,16 +1,20 @@
 class Customer
+  @@wishlist = []
   @@customers = []
     attr_reader :name
-    attr_accessor :wishlist
-    
+
   def initialize(options={})
     @name= options[:name]
-    @wishlist= options[:wishlist]
+    @wishlist = @@wishlist
     add_to_customers
   end
 
   def self.all
     @@customers
+  end
+
+  def wishlist(product)
+    @@wishlist.push(product)
   end
 
   def self.find_by_name(name)
