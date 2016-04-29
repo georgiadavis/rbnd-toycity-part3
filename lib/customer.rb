@@ -22,6 +22,14 @@ class Customer
     @@customers.find { |customer| customer.name == name }
   end
 
+  def customer_purchase(product)
+    if product.in_stock? == false
+      raise OutOfStockError "'#{product.title}' is out of stock"
+    else
+      Transaction.new(self, product)
+    end
+  end
+
   private
 
   def add_to_customers

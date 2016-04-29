@@ -12,11 +12,9 @@ class Transaction
     @customer= customer
     @product= product
     product.purchased
-    customer_purchase
+
     @@transactions << self
   end
-
-
 
   def self.all
     @@transactions
@@ -27,12 +25,4 @@ class Transaction
     @@transactions.find { |transaction| transaction.id == id }
   end
 
-  private
-  def customer_purchase
-    if product.in_stock? == false
-      raise OutOfStockError "'#{product.title}' is out of stock"
-    else
-      Transaction.new(self, product)
-    end
-  end
 end
