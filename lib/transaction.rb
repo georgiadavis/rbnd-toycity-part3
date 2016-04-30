@@ -7,12 +7,12 @@ class Transaction
 
 # need to initialize with an id that increments with each transaction
   def initialize(customer, product)
-    @id = @@id
-    @@id += 1
     @customer= customer
     @product= product
     # @@transactions << self
     add_to_transactions
+    @id = @@id
+    @@id += 1
     product.purchased
   end
 
