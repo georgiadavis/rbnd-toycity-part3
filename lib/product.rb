@@ -31,11 +31,7 @@ class Product
   end
 
   def purchased
-    if in_stock? == false
-      raise OutOfStockError "'#{product.title}' is out of stock"
-    else
-      self.stock -= 1
-    end
+    self.stock -= 1
   end
 
   def restock(amount)

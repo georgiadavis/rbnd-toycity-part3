@@ -11,8 +11,9 @@ class Transaction
     @@id += 1
     @customer= customer
     @product= product
+    # @@transactions << self
+    add_to_transactions
     product.purchased
-    @@transactions << self
   end
 
   def self.all
@@ -22,6 +23,14 @@ class Transaction
   def self.find_by_transaction(id)
     # to help you quickly return a single transaction based on its name
     @@transactions.find { |transaction| transaction.id == id }
+  end
+
+  def add_to_transactions
+    if product.in_stock? == true
+      @@transaction << self
+    else
+      raise OutofStockError, "'#{product}' is out of stock"
+    end
   end
 
 end
