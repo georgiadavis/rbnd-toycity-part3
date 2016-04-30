@@ -54,10 +54,10 @@ puts transaction.product == nanoblock # Should return true
 puts transaction.product == firehouse # Should return false
 puts transaction.customer == walter # Should return true
 #
-puts nanoblock.stock # Should return 11 (not sure how do this)
+puts nanoblock.stock # Should return 11
 
 # PURCHASES
-walter.customer_purchase(nanoblock)
+puts walter.customer_purchase(nanoblock)
 
 puts Transaction.all.count # Should return 2
 
