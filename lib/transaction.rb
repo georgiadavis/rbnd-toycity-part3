@@ -27,7 +27,7 @@ class Transaction
 
   def add_to_transactions
     if product.in_stock? == true
-      @@transaction << self
+      @@transactions << self
     else
       raise OutofStockError, "'#{product}' is out of stock"
     end
